@@ -5,15 +5,19 @@ const mongoose = require ('mongoose');
 const Schema = mongoose.Schema;
 
 let clientSchema =  new Schema ({
-    NomClient: string,
+    NomClient: String,
     Adresse: String,
-    CP: number,
-    Ville: string,
-    ContactRefId: Number,
-    Telephone: number,
-    Mail: string,
+    CP: Number,
+    Ville: String,
+    ContactRef: {
+        nom : String,
+        prenom : String,
+        poste: String
+    },
+    Telephone: {type: String, match: /\d{10}/},
+    Mail: String,
     Prospect: Boolean
-});
+})
 
 // On crée une classe qu'on va utiliser ailleurs
 module.exports =  mongoose.model('client', clientSchema);
