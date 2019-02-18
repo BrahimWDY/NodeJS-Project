@@ -8,10 +8,11 @@
     "start": "nodemon app.js",
     "questions": "nodemon nclient.js"
   },
-  "author": "Brahim Ouarradi",
+  "author": "Brahim Ouarradi & Hyun suk Kim",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "chalk": "^2.4.2",
     "express": "^4.16.4",
     "mongoose": "^4.13.18",
     "nodemon": "^1.18.9"
